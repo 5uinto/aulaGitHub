@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+
+<h1>Listas Aninhadas</h1>
+
+<h2>Lista de Utilidades</h2>
+
+<ul class="tree">
+    <li>
+        <span wm-folder>Produtos de Limpeza</span> <!--Resposta do Professor-->
+        <ul>
+            <li>
+                <span wm-folder>Detergente</span>
+                <ul>
+                    <li>YpÊ</li>
+                    <li>Ace</li>
+                    <li>Omo</li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder>Esponja</span>
+                <ul>
+                    <li>Scott Brite</li>
+                    <li>Assolan</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <span wm-folder>Produtos Eletrônicos</span><!--Resposta do Professor-->
+        <ul>
+            <li>
+                <span wm-folder>Eletrodomésticos</span>
+                <ul>
+                    <li>Liquidificador</li>
+                    <li>Ventilador</li>
+                    <li>Geladeira</li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder>Celulares</span>
+                <ul>
+                    <li>SamSung</li>
+                    <li>iPhone</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        <span wm-folder>Cama Mesa e Banho</span>
+        <ul>
+            <li>Toalhas</li>
+            <li>Lençóis</li>
+            <li>Almofadas</li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="lacss.css">
+
+<!--Resposta do professor-->
+<script> 
+    document.querySelectorAll('[wm-folder]').forEach(folder => {
+        folder.onclick = function(e) {
+            //debugger
+            //console.log('teste')
+
+            const ul = folder.nextElementSibling
+
+            // console.log('ul')
+
+            const display = ul.style.display
+            ul.style.display = display === 'none' ? 'block' : 'none'
+        }
+    })
+</script>
+

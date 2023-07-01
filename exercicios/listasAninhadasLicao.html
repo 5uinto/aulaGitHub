@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<head>
+    <style>
+        .leaf {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+
+<h1>Listas Aninhadas</h1>
+
+<link rel="stylesheet" href="lacss.css">
+
+<h2>Lista de Utilidades</h2>
+
+<ul class="tree">
+    <li>
+        Produtos de Limpeza
+        <ul class="leaf">
+            <li>
+                Detergente
+                <ul class="leaf">
+                    <li>YpÊ</li>
+                    <li>Ace</li>
+                    <li>Omo</li>
+                </ul>
+            </li>
+            <li>
+                Esponja
+                <ul class="leaf">
+                    <li>Scott Brite</li>
+                    <li>Assolan</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <li>
+        Produtos Eletrônicos
+        <ul class="leaf">
+            <li>
+                Eletrodomésticos
+                <ul class="leaf">
+                    <li>Liquidificador</li>
+                    <li>Ventilador</li>
+                    <li>Geladeira</li>
+                </ul>
+            </li>
+            <li>
+                Celulares
+                <ul class="leaf">
+                    <li>SamSung</li>
+                    <li>iPhone</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    const tree = document.querySelector('.tree');
+
+      tree.addEventListener('click', function(event) {
+        const leaf = event.target.querySelector('.leaf');
+
+        if (leaf) {
+          leaf.classList.toggle('show');
+        }
+      });    
+</script>
+
